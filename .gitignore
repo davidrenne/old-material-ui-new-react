@@ -3,7 +3,7 @@ npm-debug.log
 build
 coverage
 .eslintcache
-
+.history
 # Exclude compiled files
 /lib
 icon-builder/js

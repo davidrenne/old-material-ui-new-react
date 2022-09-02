@@ -1,8 +1,8 @@
 {
-  "name": "material-ui-build",
+  "name": "old-material-ui-new-react",
   "private": true,
-  "author": "Material-UI Team",
-  "version": "0.20.2",
+  "author": "David Renne & Material-UI Team",
+  "version": "0.20.3",
   "description": "React Components that Implement Google's Material Design.",
   "main": "./src/index.js",
   "keywords": [
@@ -13,11 +13,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/callemall/material-ui.git"
+    "url": "https://github.com/davidrenne/old-material-ui-new-react.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/callemall/material-ui/issues"
+    "url": "https://github.com/davidrenne/old-material-ui-new-react/issues"
   },
   "homepage": "http://material-ui.com/",
   "scripts": {
@@ -44,8 +44,8 @@
     "postpublish": "npm run build && cd build && npm publish"
   },
   "peerDependencies": {
-    "react": "^15.4.0 || ^16.0.0",
-    "react-dom": "^15.4.0 || ^16.0.0"
+    "react": "^15.4.0 || >16.0.0",
+    "react-dom": "^15.4.0 || >16.0.0"
   },
   "dependencies": {
     "babel-runtime": "^6.23.0",

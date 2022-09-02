@@ -483,20 +483,12 @@ class ListItem extends Component {
     }
     event.stopPropagation();
 
-    if (this.props.open === null) {
-      this.setState({open: !this.state.open}, () => {
-        this.props.onNestedListToggle(this);
-      });
-    } else {
-      // Exposing `this` in the callback is quite a bad API.
-      // I'm doing a one level deep clone to expose a fake state.open.
-      this.props.onNestedListToggle({
-        ...this,
-        state: {
-          open: !this.state.open,
-        },
-      });
-    }
+    this.setState({open: !this.state.open}, () => {
+      this.props.onNestedListToggle(this);
+      if (this.props.onClick) {
+        this.props.onClick(event);
+      }
+    });
   };
 
   handleRightIconButtonKeyboardFocus = (event, isKeyboardFocused) => {
