@@ -1,24 +1,20 @@
-#### Note
-
-For *how-to* questions and other non-issues,
-please use [StackOverflow](http://stackoverflow.com/questions/tagged/material-ui)
-instead of Github issues. There is a StackOverflow tag called "material-ui"
-that you can use to tag your questions.
-
 # [Material-UI](http://www.material-ui.com/)
-
-[![npm package](https://img.shields.io/npm/v/material-ui.svg?style=flat-square)](https://www.npmjs.org/package/material-ui)
-[![Build Status](https://travis-ci.org/callemall/material-ui.svg?branch=master)](https://travis-ci.org/callemall/material-ui)
-[![Gitter](https://img.shields.io/badge/gitter-join%20chat-f81a65.svg?style=flat-square)](https://gitter.im/callemall/material-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Coverage Status](https://coveralls.io/repos/github/callemall/material-ui/badge.svg?branch=master)](https://coveralls.io/github/callemall/material-ui?branch=master)
-
-[![PeerDependencies](https://img.shields.io/david/peer/callemall/material-ui.svg?style=flat-square)](https://david-dm.org/callemall/material-ui#info=peerDependencies&view=list)
-[![Dependencies](https://img.shields.io/david/callemall/material-ui.svg?style=flat-square)](https://david-dm.org/callemall/material-ui)
-[![DevDependencies](https://img.shields.io/david/dev/callemall/material-ui.svg?style=flat-square)](https://david-dm.org/callemall/material-ui#info=devDependencies&view=list)
 
 Material-UI is a set of [React](http://facebook.github.io/react/) components that implement
 [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html)
 specification.
+
+This is a fork of the V.0.X which was deprecated in 2018, but will hopefully be updated and maintained to work with later versions of react.
+
+```
+WARNING: This package is a custom version used for a huge application with over 1400 components using material-ui 0.X (not sure if we will ever upgrade to latest MUI) 
+
+The app was using v0.20.2 but upgrading to newer react 16.14 successfully.  This also fixes an issue we saw in upgrading with the ListItem's arrows not clicking your onClick handler which was previously working on material-ui@0.18.6 and react@15.4.2
+
+This package will possibly be upgraded later if I can get it to compile correctly (still working out kinks in my local environment to compile the JSX from source)
+
+https://github.com/mui/material-ui/commit/069d474ed9da93389feac548a9063e6b84b1c1a3#r83205697
+```
 
 Check out our [documentation site](http://www.material-ui.com/) for live examples.
 It's still a work in progress, but hopefully you can see where we're headed.
