@@ -1,25 +1,19 @@
-# [Material-UI](http://www.material-ui.com/)
+# [velocity-mui -> fork of Material-UI](https://v0.mui.com/#/)
 
 Material-UI is a set of [React](http://facebook.github.io/react/) components that implement
 [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html)
 specification.
 
-This is a fork of the V.0.X which was deprecated in 2018, but will hopefully be updated and maintained to work with later versions of react.
+This is a fork of the call-em-all/material-ui V.0.X which was deprecated in 2018, but will hopefully be updated and maintained to work with later versions of react.
 
-```
-WARNING: This package is a custom version used for a huge application with over 1400 components using material-ui 0.X (not sure if we will ever upgrade to latest MUI) 
+If you started a long term project using the v0.x branches and are looking to upgrade to later versions of react, but it is too much work to upgrade your app to v1-v5 of material-ui/mui@core, then you might eventually want to use this library.
 
-The app was using v0.20.2 but upgrading to newer react 16.14 successfully.  This also fixes an issue we saw in upgrading with the ListItem's arrows not clicking your onClick handler which was previously working on material-ui@0.18.6 and react@15.4.2
+Currently the only bug fix applied to v0.20.2, is a bug fix found when running react 16.14 with the ListItem misbehaving with onClick events not propigating like we saw with react 15 and v.18.x of material-ui. 
 
-This package will possibly be upgraded later if I can get it to compile correctly (still working out kinks in my local environment to compile the JSX from source)
+Later more fixes will be applied to this library as we upgrade to react 17 and 18 in the future hopefully.  Currently [I cant compile from source](https://github.com/mui/material-ui/commit/069d474ed9da93389feac548a9063e6b84b1c1a3#r83205697), but hopefully soon the maintainers can help me compile my source back to plain javascript to upgrade future parts of react that will be neccessary to maintain this core library.
 
-https://github.com/mui/material-ui/commit/069d474ed9da93389feac548a9063e6b84b1c1a3#r83205697
-```
-
-Check out our [documentation site](http://www.material-ui.com/) for live examples.
+Check out our [documentation site](https://v0.mui.com/#/) for live examples.
 It's still a work in progress, but hopefully you can see where we're headed.
-
-**Recently Updated?** Please read the [changelog](https://github.com/callemall/material-ui/releases), this README and the documentation before posting an issue.
 
 ## Required Knowledge
 
@@ -33,19 +27,12 @@ for a quick introduction before you read on.)
 
 ## Installation
 
-Material-UI is available as an [npm package](https://www.npmjs.org/package/material-ui).
+velocity-mui is available as an [npm package](https://www.npmjs.org/package/velocity-mui).
 
 **Stable channel**
 ```sh
-npm install material-ui
+npm install velocity-mui
 ```
-
-**Pre-release channel**
-```sh
-npm install material-ui@next
-```
-
-Please note that `@next` will only point to pre-releases; to get the latest stable release use `@latest` instead.
 
 ### Roboto Font
 
@@ -64,7 +51,7 @@ Here is a quick example to get you started:
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MuiThemeProvider from 'velocity-mui/styles/MuiThemeProvider';
 import MyAwesomeReactComponent from './MyAwesomeReactComponent';
 
 const App = () => (
@@ -82,7 +69,7 @@ ReactDOM.render(
 **./MyAwesomeReactComponent.js**
 ```jsx
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+import RaisedButton from 'velocity-mui/RaisedButton';
 
 const MyAwesomeReactComponent = () => (
   <RaisedButton label="Default" />
@@ -104,41 +91,22 @@ achieved in the following two ways:
 
 ## Examples
 
-There are 2 projects that you can look at to get started. They can be found in the
-[examples folder](https://github.com/callemall/material-ui/tree/master/examples).
-These projects are basic examples that show how to consume material-ui components
-in your own project. The first project uses [browserify](http://browserify.org/)
-for module bundling and [gulp](http://gulpjs.com/) for JS task automation,
-while the second project uses [webpack](http://webpack.github.io/) for module bundling and building.
-
-The source code for this documentation site is also included in the repository.
-This is a slightly more complex project that also uses webpack, and contains
-examples of every material-ui component. Check out the
-[docs folder](https://github.com/callemall/material-ui/tree/master/docs)
-for build instructions.
-
+[See Components section on v0.mui.com](https://v0.mui.com/#/)
 ## Roadmap
 
-The future plans and high priority features and enhancements can be found
-in the [ROADMAP.md](https://github.com/mui-org/material-ui/blob/v0.x/ROADMAP.md) file.
-
+None, this library is a fork and will be compiled later for future versions of react past 16.14 once we find time to upgrade to later versions in our app.
 ## Contribute
 
 [Material-UI](http://www.material-ui.com/) came about from our love of
 [React](http://facebook.github.io/react/) and
 [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html).
-We're currently using it on a project at [Call-Em-All](https://www.call-em-all.com/Careers)
-and plan on adding to it and making it better. If you'd like to help,
-check out the [docs folder](https://github.com/callemall/material-ui/tree/master/docs).
-We'd greatly appreciate any [contribution](https://github.com/mui-org/material-ui/blob/v0.x/CONTRIBUTING.md)
-you make. :)
 
 ## Thanks
 
 [<img src="https://www.browserstack.com/images/mail/browserstack-logo-footer.png" width="120">](https://www.browserstack.com/)
 
-Thank you to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test `material-ui` in real browsers.
+Thank you to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test `velocity-mui` in real browsers.
 
 ## License
 This project is licensed under the terms of the
-[MIT license](https://github.com/mui-org/material-ui/blob/v0.x/LICENSE)
+[MIT license](https://github.com/mui/material-ui/blob/master/LICENSE)
