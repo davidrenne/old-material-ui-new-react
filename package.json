@@ -2,7 +2,7 @@
   "name": "velocity-mui",
   "private": true,
   "author": "David Renne & Material-UI Team",
-  "version": "0.20.3",
+  "version": "0.20.8",
   "description": "React Components that Implement Google's Material Design.",
   "main": "./src/index.js",
   "keywords": [

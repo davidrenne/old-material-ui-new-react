@@ -244,9 +244,9 @@ var ListItem = function (_Component) {
       }
 
       if (_this.props.primaryTogglesNestedList) {
-        _this.handleNestedListToggle(event);
+        _this.handleNestedListToggle(event, true);
       }
-    }, _this.handleNestedListToggle = function (event) {
+    }, _this.handleNestedListToggle = function (event, fromPrimaryNested) {
       if (_this.props.leftCheckbox) {
         event.preventDefault();
       }
@@ -254,7 +254,8 @@ var ListItem = function (_Component) {
 
       _this.setState({ open: !_this.state.open }, function () {
         _this.props.onNestedListToggle(_this);
-        if (_this.props.onClick) {
+        // Only call onClick when user clicks on the Up/Down Arrow so it doesnt call onClick twice.
+        if (_this.props.onClick && !fromPrimaryNested) {
           _this.props.onClick(event);
         }
       });

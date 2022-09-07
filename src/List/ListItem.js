@@ -473,11 +473,11 @@ class ListItem extends Component {
     }
 
     if (this.props.primaryTogglesNestedList) {
-      this.handleNestedListToggle(event);
+      this.handleNestedListToggle(event, true);
     }
   };
 
-  handleNestedListToggle = (event) => {
+  handleNestedListToggle = (event, fromPrimaryNested=false) => {
     if (this.props.leftCheckbox) {
       event.preventDefault();
     }
@@ -485,7 +485,8 @@ class ListItem extends Component {
 
     this.setState({open: !this.state.open}, () => {
       this.props.onNestedListToggle(this);
-      if (this.props.onClick) {
+      // Only call onClick when user clicks on the Up/Down Arrow so it doesnt call onClick twice.
+      if (this.props.onClick && !fromPrimaryNested) {
         this.props.onClick(event);
       }
     });
